@@ -1,0 +1,23 @@
+"#socialButtons": {
+	backgroundColor: "#00a889",
+	height: "11%",
+	width: "80%",
+	borderRadius: 10,
+	layout: "horizontal"
+}
+
+"#facebookButton": {
+	image: WPATH('/facebook.png')
+}
+
+"#twitterButton": {
+	image: WPATH('/twitter.png')
+}
+
+"#whatsappButton": {
+	image: WPATH('/whatsapp.png')
+}
+
+"#mailButton": {
+	image: WPATH('/mail.png')
+}

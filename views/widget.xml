@@ -1,0 +1,19 @@
+<Alloy>
+	<View id="socialButtons">
+        <View width="20%" height="100%" left="2%">
+            <ImageView height="60%" id="facebookButton" onClick="shareOnFacebook"/>
+        </View>
+        <View width="1" left="2%" top="2" bottom="2" backgroundColor="#bbe5de" />
+        <View width="20%" height="100%" left="2%">
+            <ImageView height="60%" id="twitterButton" onClick="shareOnTwitter"/>
+        </View>
+        <View width="1" left="2%" top="2" bottom="2" backgroundColor="#bbe5de" />
+        <View width="20%" height="100%" left="2%">
+            <ImageView height="70%" id="whatsappButton" onClick="shareOnWhatsapp"/>
+        </View>
+        <View width="1" left="2%" top="2" bottom="2"  backgroundColor="#bbe5de" />
+        <View width="20%" height="100%" left="2%">
+            <ImageView height="50%" id="mailButton" onClick="shareOnMail"/>
+        </View>
+    </View>
+</Alloy>

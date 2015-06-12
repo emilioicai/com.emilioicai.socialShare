@@ -1,0 +1,13 @@
+{
+	"id": "com.emilioicai.socialShare",
+	"name": "com.emilioicai.socialShare",
+	"description" : "",
+	"author": "Emilio Rodriguez",
+	"version": "1.0",
+	"copyright":"Copyright (c) 2015",
+	"license":"Public Domain",
+	"min-alloy-version": "1.0",
+	"min-titanium-version":"3.1",
+	"tags":"social, twitter, facebook, whatsapp, share, sharing, social networks",
+	"platforms":"android,ios"
+}
