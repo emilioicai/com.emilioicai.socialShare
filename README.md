@@ -20,7 +20,10 @@ Initializes the social sharing buttons. Config can contain the following propert
 - whatsapp.errorMsg: error message to be displayed if whatsapp is not available in the device
 - onSuccess: callback to be fired in case the sharing was successful
 
-```
+## Example
+<Require type="widget" src="com.emilioicai.socialShare" id="socialShare"/>
+
+```javascript
 var shareUrl = "http://9gag.com";
 var textForSocialPost = "Check this out!";
 var title = "The best site in the interwebs";
