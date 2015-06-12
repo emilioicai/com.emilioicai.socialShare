@@ -18,6 +18,7 @@ Initializes the social sharing buttons. Config can contain the following propert
 - email.subject: subject to be added when sharing by email
 - email.errorMsg: error message to be displayed if the email client is not available in the device
 - twitter.errorMsg: error message to be displayed if twitter is not available in the device
+- twitter.text: text to be included in the tweet (optional, if not specified the general one will be twitted)
 - facebook.errorMsg: error message to be displayed if facebook is not available in the device
 - whatsapp.errorMsg: error message to be displayed if whatsapp is not available in the device
 - onSuccess: callback to be fired in case the sharing was successful
@@ -43,7 +44,8 @@ var socialOptions = {
 		errorMsg: L('mail_not_supported_body')
 	},
 	twitter: {
-		errorMsg: L('twitter_error')
+		errorMsg: L('twitter_error'),
+		text: textForSocialPost + " @9gag"
 	},
 	facebook: {
 		errorMsg: L('facebook_error')

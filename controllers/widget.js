@@ -112,7 +112,7 @@ function shareOnWhatsapp() {
 
 function shareOnTwitter() {
 	_postTo('twitter', {
-		text: _options.text,
+		text: _options.twitter.text || _options.text,
 		url: _options.url,
 		callback: _options.onSuccess
 	});
