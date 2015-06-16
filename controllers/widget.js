@@ -146,6 +146,7 @@ function init(options) {
 	_options = options;
 	if(options.top) $.socialButtons.top = options.top;
 	if(options.bottom) $.socialButtons.bottom = options.bottom;
+	if(options.height) $.socialButtons.height = options.height;
 	if(options.backgroundColor) $.socialButtons.backgroundColor = options.backgroundColor;
 }
 
