@@ -24,7 +24,9 @@ var _options = {
 /** Opens an email composer window */
 function _sendEmail(textForSharing, subject, callback){
 	var emailDialog = Titanium.UI.createEmailDialog();
-	emailDialog.addEventListener('complete', callback);
+	emailDialog.addEventListener('complete', function(){
+		callback('email');
+	});
 
 	if (!emailDialog.isSupported()) {
 		Ti.UI.createAlertDialog({title:"",message:_options.email.errorMsg}).show();
@@ -44,7 +46,7 @@ function _sendFacebookStream(data)
 	var shareCompleted = function _shareCompleted(e) {
         if (e.success) {
 			if(typeof data.callback === "function")
-				data.callback();
+				data.callback('facebook');
         } else {
             alert(_options.facebook.errorMsg);
         }
@@ -82,7 +84,7 @@ function _postTo(service, data) {
 				isOpen = Titanium.Platform.canOpenURL('twitter://post');
 			}
 			if(isOpen)
-				data.callback();
+				if(typeof data.callback === 'function') data.callback('twitter');
 			else
 				alert(_options.twitter.errorMsg);
 			break;
@@ -92,7 +94,7 @@ function _postTo(service, data) {
 				isOpen = Titanium.Platform.canOpenURL('whatsapp://send');
 			}
 			if(isOpen)
-				data.callback();
+				if(typeof data.callback === 'function') data.callback('whatsapp');
 			else
 				alert(_options.whatsapp.errorMsg);
 			break;
