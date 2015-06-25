@@ -83,20 +83,25 @@ function _postTo(service, data) {
 			if(OS_IOS){
 				isOpen = Titanium.Platform.canOpenURL('twitter://post');
 			}
-			if(isOpen)
+			if(isOpen){
 				if(typeof data.callback === 'function') data.callback('twitter');
-			else
-				alert(_options.twitter.errorMsg);
+			}
+			else {
+				Ti.UI.createAlertDialog({title:"",message:_options.twitter.errorMsg}).show();
+			}
+				
 			break;
 		case 'whatsapp':
 			isOpen = Titanium.Platform.openURL('whatsapp://send?text=' + encodeURIComponent(data.text + ' ' + data.url));
 			if(OS_IOS){
 				isOpen = Titanium.Platform.canOpenURL('whatsapp://send');
 			}
-			if(isOpen)
+			if(isOpen){
 				if(typeof data.callback === 'function') data.callback('whatsapp');
-			else
-				alert(_options.whatsapp.errorMsg);
+			}
+			else {
+				Ti.UI.createAlertDialog({title:"",message:_options.whatsapp.errorMsg}).show();
+			}
 			break;
 		case 'mail':
 			_sendEmail(data.text + ' ' + data.url, data.subject, data.callback);
